@@ -98,9 +98,7 @@ function App() {
                 cols={60}
                 value={complaint}
                 onChange={(e) => setComplaint(e.target.value)}
-                placeholder={
-                  "- He smells when he sweats\n- He is cheap on dates\n- He always plays games"
-                }
+                placeholder={"Input your complaints here..."}
               />
             </div>
             <button type="submit" disabled={submitting || !complaint.trim()}>
@@ -128,17 +126,13 @@ function App() {
 
           {!loading && !fetchError && nudge && (
             <div>
-              <h3>Gentle Suggestion</h3>
+              <h3>Suggestions</h3>
               {stripPreamble(nudge.suggestion)
                 .split("\n")
                 .filter(Boolean)
                 .map((line, i) => (
                   <p key={i}>{line}</p>
                 ))}
-              {/* <details> */}
-              {/*   <summary>Show original (she said this)</summary> */}
-              {/*   <p><em>{nudge.complaint}</em></p> */}
-              {/* </details> */}
             </div>
           )}
 
