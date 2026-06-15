@@ -11,7 +11,7 @@ Enter Nudge, an app where my girlfriend can write down her frustrations about me
 ollama pull llama3.2:3b
 
 # Start the Ollama server
-ollama serve
+killall ollama && ollama serve 
 ```
 
 ### 2. Backend (Java / Spring Boot)
